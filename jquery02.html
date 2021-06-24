@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+
+</head>
+
+<body>
+
+  <h3>엘리먼트 속성 변경 attr</h3>
+
+  <input type="text" id="test1" readonly>
+
+  <img src="#" class="test2" alt="이미지" width="70px" height="70px">
+
+  <img src="#" class="test3" width="" height="" alt="이미지">
+
+  <script>
+
+    // js
+    var a1 = document.getElementById("test1").id;
+    console.log(a1);
+
+    // jquery
+
+    var a2 = $("#test1").attr("id");
+    var a3 = $("#test1").attr("readonly");
+    console.log(a2);
+    console.log(a3);
+
+    // 값의 변경 (속성명, 변경값)
+
+    $(".test2").attr("src", "space.jpg");
+
+    // 값의 여러값을 한번에 변경 {키:값}
+    $(".test3").attr({ src: "space.jpg", width: "70px", height: "70px", alt: "space이미지" });
+
+
+  </script>
+
+</body>
+
+</html>
